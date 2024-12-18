@@ -27,7 +27,7 @@ app.listen(port, () => {
 app.post('/products', (req: Request, res: Response) => {
     const { name, price } = req.body;
     // Logika untuk menambah produk
-    res.send('Product added');
+    res.send(`Product added = name: ${name}, price: ${price} `);
 });
 
 // Endpoint untuk mendapatkan semua produk
@@ -40,7 +40,7 @@ app.get('/products', (req: Request, res: Response) => {
 app.post('/orders', (req: Request, res: Response) => {
     const { productId, quantity } = req.body;
     // Logika untuk membuat order
-    res.send('Order created');
+    res.send(`Orders created = productId: ${productId}, quantity: ${quantity} `);
 });
 
 // Endpoint untuk mendapatkan semua order
